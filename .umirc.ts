@@ -1,6 +1,7 @@
+import { IConfig } from 'umi-types';
 
 // ref: https://umijs.org/config/
-export default {
+const config: IConfig =  {
   treeShaking: true,
   routes: [
     {
@@ -32,3 +33,5 @@ export default {
     }],
   ],
 }
+
+export default config;
