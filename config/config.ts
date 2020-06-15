@@ -6,9 +6,24 @@ const config: IConfig =  {
   routes: [
     {
       path: '/',
-      component: '../layouts/index',
+      component: '../layouts/BlankLayout',
       routes: [
-        { path: '/', component: '../pages/index' }
+        { 
+          path: '/user', 
+          component: '../layouts/UserLayout',
+          routes: [
+            {
+              path: '/user',
+              redirect: '/user/login',
+            },
+            {
+              name: 'login',
+              icon: 'smile',
+              path: '/user/login',
+              component: './user/login',
+            }
+          ]
+        }
       ]
     }
   ],
